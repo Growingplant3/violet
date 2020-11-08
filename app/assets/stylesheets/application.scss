@@ -1,0 +1,44 @@
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+
+@import 'bootstrap/scss/bootstrap';
+
+header {
+  background-color: black;
+  height: 3rem;
+}
+
+nav {
+  background-color: gray;
+  height: 2rem;
+}
+
+.left-sidebar {
+  background-color: red;
+}
+
+.main-contents {
+  background-color: green;
+}
+
+.right-sidebar {
+  background-color: blue;
+}
+
+body > div {
+  height: 2000px;
+  background-color: purple;
+  > ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.footer-wrapper {
+  background-color: orange;
+  height: 2rem;
+  width: 100%;
+}
