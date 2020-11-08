@@ -1,2 +1,75 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<!--保留: デザインはbootstrapのカード,幅は枠が100%のカードが95%くらい.画像が60%、タイトルが20%、本文が10%、created_atが10%-->
+<!--begin::main_contents_element-->
+
+<!--begin::notice-->
+<p>
+  お知らせ、新着情報、オススメとか
+</p>
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+<!--end::notice-->
+
+<!--begin::blog_object-->
+<div class="card m-2">
+  <div class="card-body">
+    <h3 class="card-title">ブログタイトル　最新</h5>
+    <p class="card-text">少しだけコンテンツの中身の紹介</p>
+    <a href="#" class="btn btn-primary">読んでみる</a>
+  </div>
+</div>
+
+<div class="card m-2">
+  <div class="card-body">
+    <h3 class="card-title">ブログタイトル　最新-1</h5>
+    <p class="card-text">少しだけコンテンツの中身の紹介</p>
+    <a href="#" class="btn btn-primary">読んでみる</a>
+  </div>
+</div>
+
+<div class="card m-2">
+  <div class="card-body">
+    <h3 class="card-title">ブログタイトル　最新-2</h5>
+    <p class="card-text">少しだけコンテンツの中身の紹介</p>
+    <a href="#" class="btn btn-primary">読んでみる</a>
+  </div>
+</div>
+
+<div class="card m-2">
+  <div class="card-body">
+    <h3 class="card-title">ブログタイトル　最新-3</h5>
+    <p class="card-text">少しだけコンテンツの中身の紹介</p>
+    <a href="#" class="btn btn-primary">読んでみる</a>
+  </div>
+</div>
+
+<div class="card m-2">
+  <div class="card-body">
+    <h3 class="card-title">ブログタイトル　最新-4</h5>
+    <p class="card-text">少しだけコンテンツの中身の紹介</p>
+    <a href="#" class="btn btn-primary">読んでみる</a>
+  </div>
+</div>
+<!--end::blog_object-->
+
+<!--begin::producer_introduction-->
+<p>
+  製作者情報
+</p>
+
+<% if @articles %>
+  <%= @articles.count %>
+<% end %>
+<!--begin::producer_introduction-->
+
+<!--end::main_contents_element-->

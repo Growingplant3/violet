@@ -10,6 +10,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "shared/header" %>
+    <%= render "shared/nav_bar" %>
+    <div>
+      <ul class="row no-gutters">
+        <%= render "shared/left_sidebar" %>
+        <%= render "shared/main_contents" %>
+        <%= render "shared/right_sidebar" %>
+      </ul>
+    </div>
+    <%= render "shared/footer" %>
   </body>
 </html>
