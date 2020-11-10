@@ -21,7 +21,12 @@ nav {
 }
 
 .right-sidebar {
-  background-color: blue;
+  border: ridge 5px #808080;
+  width: 100%;
+  background-color: #FF9999;
+  > table tr {
+    border: solid 1px black;
+  }
 }
 
 body > div {
@@ -30,6 +35,15 @@ body > div {
   > ul {
     list-style: none;
     padding-left: 0;
+  }
+}
+
+.left-sidebar {
+  border: ridge 5px #808080;
+  width: 100%;
+  background-color: #99FFFF;
+  > table tr {
+    border: solid 1px black;
   }
 }
 
