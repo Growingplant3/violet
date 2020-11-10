@@ -16,6 +16,19 @@ nav {
   height: 2rem;
 }
 
+.row {
+  margin: 0;
+}
+
+.left-sidebar {
+  border: ridge 5px #808080;
+  width: 100%;
+  background-color: #99FFFF;
+  > table tr {
+    border: solid 1px black;
+  }
+}
+
 .main-contents > div {
   background-color: green;
 }
@@ -24,6 +37,8 @@ nav {
   border: ridge 5px #808080;
   width: 100%;
   background-color: #FF9999;
+  position: relative;
+  right: 1rem;
   > table tr {
     border: solid 1px black;
   }
@@ -35,15 +50,6 @@ body > div {
   > ul {
     list-style: none;
     padding-left: 0;
-  }
-}
-
-.left-sidebar {
-  border: ridge 5px #808080;
-  width: 100%;
-  background-color: #99FFFF;
-  > table tr {
-    border: solid 1px black;
   }
 }
 
