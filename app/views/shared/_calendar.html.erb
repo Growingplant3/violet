@@ -1,0 +1,58 @@
+<script>
+  var newDate = new Date();
+  var weekTable = new Array("日","月","火","水","木","金","土");
+  var monthTable = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+  var year = newDate.getFullYear();
+  if ((( year % 4 ) == 0 && ( year % 100 ) !== 0 ) || ( year % 400 ) == 0 ) {
+    monthTable[1] = 29;
+  }
+  var month = newDate.getMonth() + 1;
+  var today = newDate.getDate();
+  newDate.setDate(1);
+  var weekDay = newDate.getDay();
+  var calendarLine = Math.ceil(( weekDay + monthTable[month-1] ) / 7 );
+  var table = new Array( 7*calendarLine );
+  console.log(table);
+  for ( i = 0; i < 7*calendarLine; i++ ) { 
+    table[i] = " "
+  };
+  console.log(table);
+  for ( i = 0; i < monthTable[month]; i++ ) {
+    table[i+weekDay] = i+1
+  };
+  console.log(table);
+
+  document.write("<table border='1'>");
+  document.write("<tr><td colspan='7' bgcolor='#7fffd4'>");
+  document.write("<strong>",month,"月カレンダー</strong>");
+  document.write("</td></tr>")
+  document.write("<tr>");
+  for ( i=0; i<7; i++ ) {
+    document.write("<td align='center' ");
+    if ( i==0 ) {
+      document.write("bgcolor='#fa8072'>"); // 日曜日なら薄めの赤
+    } else if ( i==6 ) {
+      document.write("bgcolor='#0066ff'>"); // 土曜日なら薄めの青
+    } else {
+      document.write("bgcolor='#ffebcd'>"); // その他なら肌色
+    }
+    document.write("<strong>",weekTable[i],"<strong>");
+    document.write("</td>");
+  }
+  document.write("</td>");
+
+  for ( i=0; i<calendarLine; i++ ) {
+    document.write("<tr>");
+    for( j=0; j<7; j++ ) {
+      document.write("<td align='center' ");
+      var writeDate = table[j+(i*7)];
+      if ( writeDate == today ) document.write("bgcolor='#ff00ff'>");
+      else if ( j == 0 ) document.write("bgcolor='ffb6c1'>");
+      else if ( j == 6 ) document.write("bgcolor='00ccff'>");
+      else document.write("bgcolor='ffebcd'>");
+      document.write("<strong>",writeDate,"</strong>")
+      document.write("</td>");          
+    }
+  }
+  document.write("</table>");
+</script>

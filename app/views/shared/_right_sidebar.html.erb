@@ -1,48 +1,10 @@
 <!--begin::right_sidebar-->
 <li class="col-md-2">
   <section class="right-sidebar card m-2">
-    <table>
-      <tr>
-        <th>
-          <span>現在時刻</span>
-        </th>
-      </tr>
-      <tr>
-        <td>
-          <span id="arrangeClockDate"></span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span id="arrangeClockTime"></span>
-        </td>
-      </tr>
-    </table>
+    <%= render "shared/current_timer" %>
+  </section>
+  
+  <section class="right-sidebar card m-2">
+    <%= render "shared/calendar" %>
   </section>
 </li>
-
-<script>
-var arrangeClockDate = document.getElementById("arrangeClockDate");
-var arrangeClockTime = document.getElementById("arrangeClockTime");
-function arrangeClock(){
-  var weekDay = new Array("日","月","火","水","木","金","土");
-  var date = new Date();
-  var year = date.getFullYear();
-  var month = date.getMonth() + 1;
-  var da = date.getDate();
-  var day = date.getDay();
-  var hour = date.getHours();
-  var minute = date.getMinutes();
-  var second = date.getSeconds();
-  if(hour < 10) { hour = "0" + hour;}
-  if(minute < 10) { minute = "0" + minute;}
-  if(second < 10) { second = "0" + second;}
-  var arrangeClock = [ (year + "年" + month + "月" + da + "日" + weekDay[day] + "曜日" ) , ( hour + "時" + minute + "分" + second + "秒" ) ]
-  arrangeClockDate.innerHTML = arrangeClock[0].toLocaleString();
-  arrangeClockTime.innerHTML = arrangeClock[1].toLocaleString();
-  window.setTimeout("arrangeClock(),1000");
-};
-window.onload = arrangeClock;
-</script>
-
-<!--end::right_sidebar-->
