@@ -12,16 +12,12 @@
   var weekDay = newDate.getDay();
   var calendarLine = Math.ceil(( weekDay + monthTable[month-1] ) / 7 );
   var table = new Array( 7*calendarLine );
-  console.log(table);
   for ( i = 0; i < 7*calendarLine; i++ ) { 
     table[i] = " "
   };
-  console.log(table);
   for ( i = 0; i < monthTable[month]; i++ ) {
     table[i+weekDay] = i+1
   };
-  console.log(table);
-
   document.write("<table border='1'>");
   document.write("<tr><td colspan='7' bgcolor='#7fffd4'>");
   document.write("<strong>",month,"月カレンダー</strong>");
@@ -30,11 +26,11 @@
   for ( i=0; i<7; i++ ) {
     document.write("<td align='center' ");
     if ( i==0 ) {
-      document.write("bgcolor='#fa8072'>"); // 日曜日なら薄めの赤
+      document.write("bgcolor='#fa8072'>");
     } else if ( i==6 ) {
-      document.write("bgcolor='#0066ff'>"); // 土曜日なら薄めの青
+      document.write("bgcolor='#0066ff'>");
     } else {
-      document.write("bgcolor='#ffebcd'>"); // その他なら肌色
+      document.write("bgcolor='#ffebcd'>");
     }
     document.write("<strong>",weekTable[i],"<strong>");
     document.write("</td>");
