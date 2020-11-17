@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Article.create(title: "Laravel", body: "PHPの人気フレームワークといえば、やっぱりLaravelですね！")
+Article.create(title: "Rails", body: "Rubyの人気フレームワークといえば、やっぱりRailsですね！")
